@@ -2,10 +2,10 @@
 // header fix
 
 window.onscroll = function (){
-    const doScrollTop = document.documentElement.doScrollTop;
+    const docScrollTop = document.documentElement.scrollTop;
 
     if (window.innerWidth > 991){
-        if (doScrollTop > 100) {
+        if (docScrollTop > 100) {
             document.querySelector("header").classList.add("fixed")
         }
         else {
