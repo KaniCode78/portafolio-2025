@@ -30,11 +30,11 @@ header {
 }
 
 header .row {
-justify-content: space-between;
-align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .brand-name a{
+header .brand-name a {
     text-decoration: none;
     font-size: 22px;
     font-weight: 600;
@@ -43,18 +43,18 @@ header .brand-name a{
     position: relative;
 }
 
-header .nabvar ul{
+header .nabvar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-header .nabvar ul li{
+header .nabvar ul li {
     display: inline-block;
     margin-left: 35px;
 }
 
-header .nabvar ul li a{
+header .nabvar ul li a {
     font-size: 15px;
     text-decoration: none;
     line-height: 72px;
@@ -64,7 +64,7 @@ header .nabvar ul li a{
     position: relative;
 }
 
-header .nabvar ul li a::before{
+header .nabvar ul li a::before {
     content: '';
     height: 3px;
     background-color: #ffff;
@@ -75,15 +75,36 @@ header .nabvar ul li a::before{
     transition: all 0.5s ease;
 }
 
-header .nabvar ul li a:hover::before{
+header .nabvar ul li a:hover::before {
     width: 100%;
     left: 0;
 }
 
-header .nabvar ul li a.active::before{
+header .nabvar ul li a.active::before {
     width: 100%;
     left: 0;
 }
+
+/* js header */
+
+header.fixed {
+    background-color: #ffffff;
+    position: fixed;
+    border-color: #eee;
+    animation: fixedHeader 0.5s ease;
+    z-index: 11;
+}
+
+@keyframes fixedHeader {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(-1);
+    }
+}
+
+
 
 /* Home */
 
@@ -95,11 +116,11 @@ header .nabvar ul li a.active::before{
     padding: 15px;
 }
 
-.home .full-screen{
+.home .full-screen {
     min-height: 100vh;
 }
 
-.home .home-content{
+.home .home-content {
     flex: 0 0 100;
     max-width: 100%;
     display: flex;
@@ -107,7 +128,7 @@ header .nabvar ul li a.active::before{
     align-items: center;
 }
 
-.home .home-content .block{
+.home .home-content .block {
     flex: 0 0 75%;
     max-width: 75%;
     padding-left: 35px;
@@ -115,7 +136,7 @@ header .nabvar ul li a.active::before{
     margin-top: 50px;
 }
 
-.home .home-content .block h6{
+.home .home-content .block h6 {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
@@ -123,28 +144,28 @@ header .nabvar ul li a.active::before{
     padding: 0;
 }
 
-.home .home-content .block h1{
+.home .home-content .block h1 {
     color: #ffffff;
-    font-size:55px;
+    font-size: 55px;
     font-weight: 600;
     margin: 0;
     padding: 0;
 }
 
 
-.home .home-content .block h3{
+.home .home-content .block h3 {
     color: #ffffff;
-    font-size:25px;
+    font-size: 25px;
     font-weight: 500;
     margin: 0;
     padding: 0;
 }
 
-.home .home-content .block .cv-btn{
-    padding-top:20px;
+.home .home-content .block .cv-btn {
+    padding-top: 20px;
 }
 
-.home .home-content .block .cv-btn a{
+.home .home-content .block .cv-btn a {
     border-radius: 4px;
     color: #ffffff;
     border: 1px solid #ffffff;
@@ -157,21 +178,21 @@ header .nabvar ul li a.active::before{
     transition: all 0.5s ease;
 }
 
-.home .home-content .block .cv-btn a:hover{
+.home .home-content .block .cv-btn a:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
 /* Hero Efecto Mouse */
 
-.home-hero_mouse_scroll{
+.home-hero_mouse_scroll {
     position: absolute;
     bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.mouse{
+.mouse {
     width: 25px;
     height: 40px;
     border: 2px solid #ffffff;
@@ -179,3 +200,75 @@ header .nabvar ul li a.active::before{
     position: relative;
     overflow: hidden;
 }
+
+.mouse:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 1;
+    -webkit-animation: 1.3s infinite;
+    animation: wheel 1.3s infinite;
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px;
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 27px;
+    }
+}
+
+/* social-media-sidebar */
+
+.social-media-sidebar{
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    border: 2px solid #eee;
+    border-left: 2px solid #eee;
+    background: #000000;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.social-media-item{
+    width: 50px;
+}
+
+.social-media-link{
+    width: 100%;
+    display: block;
+    padding: 12px;
+    border-bottom: 2px solid #eee;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.social-media-link:hover{
+    background: rgba(255,255,255, 0.1);
+}
+
+.social-media-icon{
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.social-media-link:hover .social-media-icon{
+    color: #febd01;
+}
+
+
+/*  */
