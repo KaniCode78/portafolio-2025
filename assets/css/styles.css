@@ -17,6 +17,39 @@ body {
     flex-wrap: wrap;
 }
 
+.section-tittle {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.section-tittle h1 {
+    display: inline-block;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 5px;
+    position: relative;
+}
+
+.section-tittle h1::before {
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 20px;
+    background-color: #febd01;
+    bottom: 0;
+
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.align-item-center{
+    align-items: center !important;
+}
 /* header */
 
 header {
@@ -99,9 +132,22 @@ header.fixed {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(-1);
     }
+}
+
+header.fixed .brand-name a {
+    color: #000000;
+}
+
+header.fixed .nabvar ul li a {
+    color: #000000;
+}
+
+header.fixed .nabvar ul li a::before {
+    background-color: #febd01;
 }
 
 
@@ -232,7 +278,7 @@ header.fixed {
 
 /* social-media-sidebar */
 
-.social-media-sidebar{
+.social-media-sidebar {
     position: fixed;
     top: 50%;
     right: 10px;
@@ -244,11 +290,11 @@ header.fixed {
     z-index: 1;
 }
 
-.social-media-item{
+.social-media-item {
     width: 50px;
 }
 
-.social-media-link{
+.social-media-link {
     width: 100%;
     display: block;
     padding: 12px;
@@ -257,18 +303,96 @@ header.fixed {
     transition: background 0.3s;
 }
 
-.social-media-link:hover{
-    background: rgba(255,255,255, 0.1);
+.social-media-link:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.social-media-icon{
+.social-media-icon {
     font-size: 24px;
     color: #ffffff;
 }
 
-.social-media-link:hover .social-media-icon{
+.social-media-link:hover .social-media-icon {
     color: #febd01;
 }
 
 
-/*  */
+/*  acerca de mi */
+
+.about-me {
+    padding: 100px 15px;
+    background-color: #ffffff;
+}
+
+.about-me .about-content .img{
+    flex: 0 0 33.3%;
+    max-width: 33.33%;
+}
+
+.about-me .about-content .img img{
+    width: 100%;
+    display: block;
+}
+
+.about-me .about-content .text{
+flex: 0 0 66.6%;
+max-width: 66.6%;
+padding-left: 35px;
+}
+
+.about-me .about-content .text h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 5px;
+}
+
+.about-me .about-content .text h6{
+    font-size: 25px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 5px;
+}
+
+.about-me .about-content .text h6 span{
+    color: #febd01;
+}
+
+.about-me .about-content .text p{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    color: #838383;
+    line-height: 24px;
+}
+
+.about-me .about-content .text .social-link{
+    padding-top: 30px;
+}
+
+.about-me .about-content .text .social-link a{
+    height: 30px;
+    width: 30px;
+    background-color: #000000;
+    border-radius: 3px;
+    display: inline-block;
+    border: 1px solid #000000;
+    list-style: 20px;
+    text-align: center;
+    margin: 0 1px;
+    transition: all 0.5s ease;
+}
+
+.about-me .about-content .text .social-link a:hover{
+    background-color: transparent;
+}
+
+.about-me .about-content .text .social-link a .fa-brands{
+    font-size: 12px;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.about-me .about-content .text .social-link a:hover .fa-brands{
+    color: #febd01;
+}
