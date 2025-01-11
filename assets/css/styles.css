@@ -40,7 +40,6 @@ body {
     height: 20px;
     background-color: #febd01;
     bottom: 0;
-
 }
 
 .text-upper {
@@ -474,26 +473,141 @@ header.fixed .nabvar ul li a::before {
 
 /*color icon services*/
 
-.icon-primary{
+.icon-primary {
     color: #062caf;
 }
 
-.icon-yellow{
+.icon-yellow {
     color: #f6a622;
 }
 
-.icon-purple{
+.icon-purple {
     color: #7952f5;
 }
 
-.icon-green{
+.icon-green {
     color: #66cc33;
 }
 
-.icon-red{
+.icon-red {
     color: #ff4949;
 }
 
-.icon-cyan{
+.icon-cyan {
     color: #02d0a1;
+}
+
+
+/* habilidades */
+
+.skills {
+    padding: 100px 15px;
+    background-color: #ffffff;
+}
+
+.skills .skills-content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 40px;
+}
+
+.skills .img {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.skills .img img {
+    width: 100%;
+    display: block;
+}
+
+.skills .skills-content .section-tittle p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #838383;
+    margin: 15px 0;
+}
+
+.skills .skills-content .skills-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.skills .skills-content .skills-box h6 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0 0 8px;
+}
+
+.skills .skills-content .skills-box .skills-bar {
+    height: 5px;
+    background-color: #eeeeee;
+    position: relative;
+}
+
+.skills .skills-content .skills-box .skills-bar .skills-bar-in {
+    background-color: #febd01;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.skills .skills-content .skills-box .skills-bar .skills-bar-in span {
+    color: #838383;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+
+/* seccion de mensajes */
+
+.message-text {
+
+    background-color: #0c0c17;
+    padding: 40px 15px;
+}
+
+.message-text .text {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+}
+
+.message-text .button {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    text-align: right;
+}
+
+.message-text h2 {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 0;
+    padding: 0;
+    line-height: 35px;
+}
+
+.message-text .button a {
+    border-radius: 4px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.message-text .buttona:hover {
+    background-color: #ffffff;
+    color: #0c0c17;
 }
