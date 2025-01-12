@@ -667,10 +667,6 @@ header.fixed .nabvar ul li a::before {
     color: #ffffff;
 }
 
-
-
-
-
 .project_tittle {
     font-weight: 700;
     font-size: 20px;
@@ -684,3 +680,5 @@ header.fixed .nabvar ul li a::before {
     line-height: 1.7;
     margin-bottom: 30px;
 }
+
+/* Contacto CSS */
