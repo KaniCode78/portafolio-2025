@@ -673,7 +673,7 @@ header.fixed .nabvar ul li a::before {
     margin-bottom: 2%;
 }
 
-.project-description{
+.project-description {
     font-size: 18px;
     color: #838383;
     max-width: 600px;
@@ -682,3 +682,99 @@ header.fixed .nabvar ul li a::before {
 }
 
 /* Contacto CSS */
+
+.contact-us {
+    padding: 100px 15px;
+    background-color: #f1f1f1;
+}
+
+.contact-us .section-tittle h1::before {
+    left: 30%;
+}
+
+.contact-us .contact-form {
+    background-color: #ffffff;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 50px;
+    border: 1px solid #eeeeee;
+}
+
+.contact-us .contact-form .form-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-us .contact-form .form-header h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.contact-us .contact-form .form-header p {
+    font-weight: 400;
+    line-height: 24px;
+    color: #838383;
+    margin: 0;
+}
+
+.contact-us .contact-form .form-fields{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.contact-us .contact-form .input-field{
+    flex: 1;
+}
+
+
+.contact-us .contact-form .input-field .full-width {
+    flex: 1 0 100%;
+    
+}
+
+.contact-us .contact-form .form-control{
+height: 45px;
+width: 100%;
+margin-bottom: 15px;
+padding: 6px 12px;
+font-size: 14px;
+border: 1px solid #cecece;
+font-family: "poppins", sans-serif;
+
+}
+
+.contact-us .contact-form textarea.form-control{
+    height: 150px;
+}
+
+
+.contact-us .contact-form textarea.form-control::placeholder{
+        color: #838383;
+}
+.contact-us .contact-form .form-submit{
+    text-align: right;
+}
+
+.contact-us .contact-form .submit-button{
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #f6a622;
+    border: 1px solid #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.contact-us .contact-form .submit-button:hover { 
+    background-color: #000000;
+    color: #f1f1f1;
+}
