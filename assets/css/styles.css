@@ -2,6 +2,11 @@ body {
     font-family: "poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -54,7 +59,25 @@ body {
     text-align: center !important;
 }
 
-/* header */
+/* menu hamburguresaver */
+
+.ham-burger .fa {
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3px;
+    line-height: 30px;
+    cursor: pointer;
+    border: 1px solid #eeeeee;
+    text-align: center;
+    display: none;
+}
+
+
+
+/* header css */
 
 header {
     position: absolute;
@@ -80,18 +103,18 @@ header .brand-name a {
     position: relative;
 }
 
-header .nabvar ul {
+header .navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-header .nabvar ul li {
+header .navbar ul li {
     display: inline-block;
     margin-left: 35px;
 }
 
-header .nabvar ul li a {
+header .navbar ul li a {
     font-size: 15px;
     text-decoration: none;
     line-height: 72px;
@@ -101,7 +124,7 @@ header .nabvar ul li a {
     position: relative;
 }
 
-header .nabvar ul li a::before {
+header .navbar ul li a::before {
     content: '';
     height: 3px;
     background-color: #ffff;
@@ -112,12 +135,12 @@ header .nabvar ul li a::before {
     transition: all 0.5s ease;
 }
 
-header .nabvar ul li a:hover::before {
+header .navbar ul li a:hover::before {
     width: 100%;
     left: 0;
 }
 
-header .nabvar ul li a.active::before {
+header .navbar ul li a.active::before {
     width: 100%;
     left: 0;
 }
@@ -146,11 +169,11 @@ header.fixed .brand-name a {
     color: #000000;
 }
 
-header.fixed .nabvar ul li a {
+header.fixed .navbar ul li a {
     color: #000000;
 }
 
-header.fixed .nabvar ul li a::before {
+header.fixed .navbar ul li a::before {
     background-color: #febd01;
 }
 
@@ -721,46 +744,47 @@ header.fixed .nabvar ul li a::before {
     margin: 0;
 }
 
-.contact-us .contact-form .form-fields{
+.contact-us .contact-form .form-fields {
     display: flex;
     justify-content: space-between;
     gap: 15px;
 }
 
-.contact-us .contact-form .input-field{
+.contact-us .contact-form .input-field {
     flex: 1;
 }
 
 
 .contact-us .contact-form .input-field .full-width {
     flex: 1 0 100%;
-    
-}
-
-.contact-us .contact-form .form-control{
-height: 45px;
-width: 100%;
-margin-bottom: 15px;
-padding: 6px 12px;
-font-size: 14px;
-border: 1px solid #cecece;
-font-family: "poppins", sans-serif;
 
 }
 
-.contact-us .contact-form textarea.form-control{
+.contact-us .contact-form .form-control {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #cecece;
+    font-family: "poppins", sans-serif;
+
+}
+
+.contact-us .contact-form textarea.form-control {
     height: 150px;
 }
 
 
-.contact-us .contact-form textarea.form-control::placeholder{
-        color: #838383;
+.contact-us .contact-form textarea.form-control::placeholder {
+    color: #838383;
 }
-.contact-us .contact-form .form-submit{
+
+.contact-us .contact-form .form-submit {
     text-align: right;
 }
 
-.contact-us .contact-form .submit-button{
+.contact-us .contact-form .submit-button {
     border-radius: 4px;
     color: #ffffff;
     background-color: #f6a622;
@@ -774,7 +798,7 @@ font-family: "poppins", sans-serif;
     transition: all 0.5s ease;
 }
 
-.contact-us .contact-form .submit-button:hover { 
+.contact-us .contact-form .submit-button:hover {
     background-color: #000000;
     color: #f1f1f1;
 }
@@ -784,10 +808,10 @@ font-family: "poppins", sans-serif;
 footer {
     padding: 100px 15px;
     background-color: #0c0c17;
-    
+
 }
 
-footer .logo{
+footer .logo {
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
@@ -796,14 +820,14 @@ footer .logo{
     font-weight: 900;
 }
 
-footer .social{
+footer .social {
     flex: 0 0 100%;
     max-width: 100%;
     text-align: center;
     padding-top: 15px;
 }
 
-footer .social a{
+footer .social a {
     color: #999;
     text-decoration: none;
     display: inline-block;
@@ -812,20 +836,87 @@ footer .social a{
     transition: all 0.5s ease;
 }
 
-footer .social a:hover{
+footer .social a:hover {
     color: #f6a622;
 }
 
-.copyright{
+.copyright {
     background-color: #0c0c17;
     border-top: 1px solid #1d1d27;
     padding: 15px;
 }
 
-.copyright p{
+.copyright p {
     color: #838383;
     margin: 0;
     text-align: center;
     font-weight: 400;
     font-size: 14px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    .home .home-content .block h1 {
+        font-size: 50px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .home .home-content .block h1 {
+        font-size: 40px;
+    }
+
+    .home .home-content .block h3 {
+        font-size: 25px;
+    }
+
+    header {
+        padding: 25px 15px;
+        position: fixed;
+        background-color: #ffffff;
+        border: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    header .brand-name a {
+        color: #000000;
+    }
+
+    .ham-burger .fa {
+        display: inline-block;
+    }
+
+    .navbar {
+        position: absolute;
+        background-color: #ffffff;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        display: none;
+    }
+
+    .navbar .show {
+        display: block;
+    }
+
+    header .navbar ul li {
+        display: block;
+        margin-left: 0;
+    }
+
+    header .navbar ul li a {
+        line-height: 42px;
+        color: #ab1d1d;
+    }
+
+    header .navbar ul li a::before {
+        background-color: #f6a622;
+    }
+
 }
