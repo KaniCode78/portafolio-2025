@@ -359,6 +359,8 @@ header.fixed .navbar ul li a::before {
 .about-me .about-content .img img {
     width: 100%;
     display: block;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-me .about-content .text {
@@ -414,7 +416,7 @@ header.fixed .navbar ul li a::before {
     background-color: transparent;
 }
 
-.about-me .about-content .text .social-link a .fa-brands {
+.about-me .about-content .text .social-link a .fa-brands, .fa-solid {
     font-size: 12px;
     color: #ffffff;
     transition: all 0.5s ease;
@@ -424,6 +426,9 @@ header.fixed .navbar ul li a::before {
     color: #febd01;
 }
 
+.about-me .about-content .text .social-link a:hover .fa-solid {
+    color: #febd01;
+}
 
 /* Nuestros Servicios */
 
@@ -523,6 +528,10 @@ header.fixed .navbar ul li a::before {
 
 /* habilidades */
 
+.section-tittle .p-center {
+    text-align: center;
+}
+
 .skills {
     padding: 100px 15px;
     background-color: #ffffff;
@@ -537,11 +546,14 @@ header.fixed .navbar ul li a::before {
 .skills .img {
     flex: 0 0 50%;
     max-width: 50%;
+  
 }
 
 .skills .img img {
     width: 100%;
     display: block;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .skills .skills-content .section-tittle p {
@@ -586,6 +598,10 @@ header.fixed .navbar ul li a::before {
     position: absolute;
     right: 0;
     top: -30px;
+}
+
+.skills-bar-in{
+    width: 100%;
 }
 
 

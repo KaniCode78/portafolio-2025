@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Julius Sans One", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+nav {
+    background-color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+}
+.nav-links a:hover {
+    color: #555;
+}
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-top: 70px;
+}
+h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 600;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+.post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+}
+.post.active {
+    display: block;
+}
+.post h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+.post img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.post .preview {
+    display: block;
+}
+.post .full-text {
+    display: none;
+}
+.post .full-text.active {
+    display: block;
+}
+.read-more {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.read-more:hover {
+    background-color: #555;
+}
+
+/* Boton de compartir */
+.share-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.share-buttons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.2s;
+}
+.share-buttons a:hover {
+    color: yellow;
+}
+
+.share-buttons a i {
+    font-size: 1.5em;
+}
+
+
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+.pagination button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 3px;
+}
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.pagination button:hover:not(:disabled) {
+    background-color: #555;
+}
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+.social-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+.social-links a:hover {
+    color: #555;
+}
+
+
+/* dark mode */
+
+ /* Modo oscuro */
+ body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-mode nav {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+.dark-mode .logo,
+.dark-mode .nav-links a {
+    color: #ffffff;
+}
+.dark-mode .nav-links a:hover {
+    color: #bbbbbb;
+}
+.dark-mode header {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+.dark-mode .post {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.dark-mode .read-more {
+    background-color: #ffffff;
+    color: #121212;
+}
+.dark-mode .read-more:hover {
+    background-color: #e0e0e0;
+}
+.dark-mode .pagination button {
+    background-color: #ffffff;
+    color: #121212;
+}
+.dark-mode .pagination button:disabled {
+    background-color: #666;
+}
+.dark-mode .pagination button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+}
+.dark-mode footer {
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+}
+.dark-mode .social-links a {
+    color: #ffffff;
+}
+.dark-mode .social-links a:hover {
+    color: #bbbbbb;
+}
+.dark-mode .share-buttons a {
+    color: #ffffff;
+}
+.dark-mode .share-buttons a:hover {
+    color: #bbbbbb;
+}
+/* Estilo del botón de alternar tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.dark-mode .theme-toggle {
+    color: #ffffff;
+}
