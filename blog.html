@@ -12,20 +12,34 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">Ventas desde Cero</div>
+    <!-- Inicia Nav -->
+    <nav class="contenedor">
+        <div class="logo">
+            <img src="./assets/images/img_blog/logo VentasCero.png" alt="logo">
+        </div>
         <div class="nav-links">
             <a href="#blog">Blog</a>
+            <a href="contacto">Contacto</a>
             <a href="#ventas">Ventas desde Cero</a>
         </div>
+    </nav>
+    <!-- Termina Nav -->
+    <!-- Inicia Header -->
+
+    <header class="contenedor contenedor-header">
+        <h1>Ventas desde Cero</h1>
+        <h2>Bienvenido a nuestro blog</h2>
+        <p>Tu fuente de información sobre ventas y sus mejores practicas</p>
         <button class="theme-toggle" onclick="toggleTheme()">Dia/Noche
             <i class="fas fa-moon"></i>
         </button>
-    </nav>
-    <header>
-        <h1>Ventas desde Cero</h1>
     </header>
-    <div class="container">
+
+    <!-- Termina Header -->
+
+
+
+    <section class="contenedor">
         <div class="post">
             <h2>Importancia del Funnel de Ventas</h2>
             <img class="img-post" src="./assets/images/img_blog/funnel.jpg" alt="funnel">
@@ -397,15 +411,75 @@
             <button onclick="prevPage()" id="prev">Anterior</button>
             <button onclick="nextPage()" id="next">Siguiente</button>
         </div>
-    </div>
-    <footer>
+    </section>
+    <footer class="contenedor contenedor-footer">
+
+
+        <!-- Seccion Suscribirse -->
+
+        <div class="subscription-section">
+            <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+            <form action="https://app.kit.com/forms/7938957/subscriptions" class="seva-form formkit-form" method="post"
+                data-sv-form="7938957" data-uid="c8829962da" data-format="inline" data-version="5"
+                data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}"
+                min-width="400 500 600 700 800">
+                <div data-style="clean">
+                    <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                    <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+                        <div class="formkit-field"><input class="formkit-input" aria-label="Tu nombre"
+                                name="fields[first_name]" required="" placeholder="Tu nombre" type="text"
+                                style="color: rgb(85, 85, 85); border-color: rgb(0, 2, 7); border-radius: 4px; font-weight: 700;">
+                        </div>
+                        <div class="formkit-field"><input class="formkit-input" name="email_address"
+                                aria-label="Tu Correo Electronico" placeholder="Tu Correo Electronico" required=""
+                                type="email"
+                                style="color: rgb(85, 85, 85); border-color: rgb(0, 2, 7); border-radius: 4px; font-weight: 700;">
+                        </div>
+                        <button data-element="submit" class="formkit-submit formkit-submit "
+                            style="color: rgb(255, 255, 255); background-color: rgb(85, 85, 85); border-radius: 4px; font-weight: 400;">
+                            <div class="formkit-spinner">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div><span class="" target="_blank">Suscribirte</span>
+                        </button>
+                    </div>
+                    <div class="formkit-powered-by-convertkit-container">
+                        <a href="https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"
+                            data-element="powered-by" class="formkit-powered-by-convertkit" data-variant="dark"
+                            target="_blank" rel="nofollow">Built with Kit</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        
+
         <div class="social-links">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://twitter.com" target="_blank">Twitter</a>
-            <a href="https://instagram.com" target="_blank">Linkedin</a>
+
+         
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+
+            <a href="https://x.com/kaniltazo" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/angeldrodriguezm/" target="_blank" rel="noopener noreferrer"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
+<section>
+    <div class="footer-content"><p>
+    <a href="https://kanicode.website" target="_blank" rel="noopener noreferrer"> Kanicode</a> © 2025 </p>
+        <p>Todos los derechos reservados.</p>
+        <p>Desarrollado por <a href="https://kanicode.website" target="_blank" rel="noopener noreferrer">Kanicode</a></p>
+        <p><a href="https://kanicode.website/aviso-legal/" target="_blank" rel="noopener noreferrer">Aviso Legal</a></p>
+        <p><a href="https://kanicode.website/politica-de-privacidad/" target="_blank" rel="noopener noreferrer">Política de Privacidad</a></p>
+        <p><a href="https://kanicode.website/politica-de-cookies/" target="_blank" rel="noopener noreferrer">Política de Cookies</a></p>
+    </div>
+</section>
+    
     <script src="./assets/js/blog.js"></script>
+    <script src="https://kit.fontawesome.com/93e19d243d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
