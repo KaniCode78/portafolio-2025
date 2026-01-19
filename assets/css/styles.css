@@ -363,6 +363,12 @@ header.fixed .navbar ul li a::before {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+.about-me .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .about-me .about-content .text {
     flex: 0 0 66.6%;
     max-width: 66.6%;
@@ -428,6 +434,85 @@ header.fixed .navbar ul li a::before {
 
 .about-me .about-content .text .social-link a:hover .fa-solid {
     color: #febd01;
+}
+
+
+.about-me .social-link {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.about-me .social-link a {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+    color: #222;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.about-me .social-link a:hover {
+    background: #111;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+
+.about-me .text-link {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-me .text-link::after {
+    content: "→";
+    transition: transform 0.3s ease;
+}
+
+.about-me .text-link:hover::after {
+    transform: translateX(4px);
+}
+
+.podcast-platforms {
+    display: flex;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.podcast-platforms a {
+    font-size: 30px;
+    color: #666;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.podcast-platforms a:hover {
+    color: #000;
+    transform: translateY(-2px);
+}
+
+
+/* responsivo */
+
+@media (max-width: 768px) {
+    .about-me .text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-me .social-link,
+    .podcast-platforms {
+        justify-content: center;
+    }
 }
 
 /* Nuestros Servicios */
@@ -722,13 +807,113 @@ header.fixed .navbar ul li a::before {
 
 /* Contacto CSS */
 
+/* FIX: Centrado real de botones de contacto */
+
+.contact-quick-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us .row {
+    justify-content: center;
+}
+
+.contact-quick-actions {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ===============================
+   CONTACTO RÁPIDO (WHATSAPP + MAIL)
+   =============================== */
+
+.contact-quick-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Estilos base para ambos botones */
+.contact-quick-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+/* Botón WhatsApp */
+.whatsapp-btn {
+    background: #25D366;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+}
+
+.whatsapp-btn i {
+    font-size: 18px;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
+}
+
+/* Botón Email */
+.email-btn {
+    background: transparent;
+    color: #222;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.email-btn i {
+    font-size: 16px;
+}
+
+.email-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-quick-actions {
+        flex-direction: column;
+    }
+
+    .contact-quick-actions a {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+}
+
 .contact-us {
     padding: 100px 15px;
     background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .contact-us .section-tittle h1::before {
-    left: 30%;
+    left: 50%;
 }
 
 .contact-us .contact-form {
@@ -1078,3 +1263,4 @@ footer .social a:hover {
     }
 
 }
+
